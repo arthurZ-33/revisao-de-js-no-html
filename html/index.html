@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div name="elemento-teste" onmouseover="clicar()" o>
+      <p name="paragrafo1">Teste0</p>
+    </div>
+
+    <div class="div2" onmouseover="clicar2()">
+      <p class="par2">teste1</p>
+    </div>
+
+    <div id="div3" onmouseover="clicar3()">
+      <p id="par3">test2</p>
+    </div>
+
+    <div>
+      <p>teste3</p>
+    </div>
+
+    <div id="div5">
+      <p>teste4</p>
+    </div>
+
+    <script>
+      function clicar() {
+        div1 = window.document.getElementsByName("elemento-teste")[0];
+        div1.style.background = "orange";
+        div1.style.color = "red";
+        var par1 = "black";
+
+        par1 = window.document.getElementsByName("paragrafo1")[0];
+        par1.inneHTML = "oi";
+
+        div1.style.border = "2px solid black";
+      }
+
+      function clicar2() {
+        div2 = window.document.getElementsByClassName("div2")[0];
+        div2.style.background = "orange";
+        div2.style.color = "red";
+
+        var par2 = window.document.getElementsByClassName("par2")[0];
+        par2.ineerHTMl = "hi";
+
+        div2.style.border = "2px solid black";
+      }
+
+      function clicar3() {
+        div3 = window.document.getElementById("div3");
+        div3.style.background = "orange";
+        div3.styel.color = "red";
+
+        var par3 = window.document.getElementById("par3");
+        par.inneHTML = "i don't know";
+
+        div3.style.border = "2px solid black";
+      }
+
+      var div4 = window.document.getElementsByTagName("div")[3];
+      div4.style.backgroundColor = "orange";
+      div4.style.color = "red";
+      div4.style.border = "2px solid black";
+
+      var div5 = window.document.querySelector("#div5");
+      div5.style.backgroundColor = "orange";
+      div5.style.color = "red";
+      div5.style.border = "2px solid black";
+
+      function sair() {
+        var sair = window.getElementsByName("elemento-teste")[0];
+        sair.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>
